@@ -1,3 +1,3 @@
-var posts=["2025/03/02/多歧路，今安在/","2025/03/04/小坷笔记：Python入门/","2025/03/04/小坷笔记：一些SW小细节/","2025/03/02/薄肌养成计划/"];function toRandomPost(){
+var posts=["2025/03/02/多歧路，今安在/","2025/03/04/小坷笔记：一些SW小细节/","2025/03/04/小坷笔记：Python入门/","2025/03/02/薄肌养成计划/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };
