@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>小坷笔记：ROS2常用代码模版</title>
-      <link href="/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9AROS2%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%A8%A1%E7%89%88/"/>
-      <url>/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9AROS2%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%A8%A1%E7%89%88/</url>
-      
-        <content type="html"><![CDATA[<h1 id="关于终端"><a href="#关于终端" class="headerlink" title="关于终端"></a>关于终端</h1><p>从理论上来讲，一个终端内，source一次就够了，后续只需要colcon build</p><p>终端里点击“上”就可以得到上一次输入的指令，在第一次指令输入错误需要再输一次又不想一个字一个字敲时很方便</p><p>Linux终端中的矩形光标很烦人，非常不直观。我的技巧：矩形的左端的边就是Windows里的光标的位置，这样就很好判断了。</p><p>终端里的复制粘贴是ctrl+shift+c&#x2F;v</p><h1 id="常用复制粘贴"><a href="#常用复制粘贴" class="headerlink" title="常用复制粘贴"></a>常用复制粘贴</h1><p>无需多言</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">colcon build</span><br><span class="line"><span class="built_in">source</span> install/setup.bash</span><br></pre></td></tr></table></figure><p>这个也无需多言</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">        rclpy.init()</span><br><span class="line">        node=StaticTFBroadcaster()</span><br><span class="line">        rclpy.spin(node)</span><br><span class="line">        rclpy.shutdown()</span><br></pre></td></tr></table></figure><p>创建功能包</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ros2 pkg create --build-type ament_python --dependencies 依赖名 --license Apache-2.0 包名</span><br></pre></td></tr></table></figure><p>日常打印</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">self</span>.get_logger().info()</span><br></pre></td></tr></table></figure><h1 id="未完，持续更新中"><a href="#未完，持续更新中" class="headerlink" title="未完，持续更新中"></a>未完，持续更新中</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> 机器人 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> ROS2 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>小坷笔记：Python入门</title>
       <link href="/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9APython%E5%85%A5%E9%97%A8/"/>
       <url>/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9APython%E5%85%A5%E9%97%A8/</url>
@@ -75,6 +50,31 @@
             <tag> Solidworks </tag>
             
             <tag> 建模 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>小坷笔记：ROS2常用代码模版</title>
+      <link href="/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9AROS2%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%A8%A1%E7%89%88/"/>
+      <url>/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9AROS2%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%A8%A1%E7%89%88/</url>
+      
+        <content type="html"><![CDATA[<h1 id="关于终端"><a href="#关于终端" class="headerlink" title="关于终端"></a>关于终端</h1><p>从理论上来讲，一个终端内，source一次就够了，后续只需要colcon build</p><p>终端里点击“上”就可以得到上一次输入的指令，在第一次指令输入错误需要再输一次又不想一个字一个字敲时很方便</p><p>Linux终端中的矩形光标很烦人，非常不直观。我的技巧：矩形的左端的边就是Windows里的光标的位置，这样就很好判断了。</p><p>终端里的复制粘贴是ctrl+shift+c&#x2F;v</p><h1 id="常用复制粘贴"><a href="#常用复制粘贴" class="headerlink" title="常用复制粘贴"></a>常用复制粘贴</h1><p>无需多言</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">colcon build</span><br><span class="line"><span class="built_in">source</span> install/setup.bash</span><br></pre></td></tr></table></figure><p>这个也无需多言</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">        rclpy.init()</span><br><span class="line">        node=StaticTFBroadcaster()</span><br><span class="line">        rclpy.spin(node)</span><br><span class="line">        rclpy.shutdown()</span><br></pre></td></tr></table></figure><p>创建功能包</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ros2 pkg create --build-type ament_python --dependencies 依赖名 --license Apache-2.0 包名</span><br></pre></td></tr></table></figure><p>日常打印</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">self</span>.get_logger().info()</span><br></pre></td></tr></table></figure><h1 id="未完，持续更新中"><a href="#未完，持续更新中" class="headerlink" title="未完，持续更新中"></a>未完，持续更新中</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 机器人 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ROS2 </tag>
             
         </tags>
       
