@@ -60,6 +60,33 @@
     
     
     <entry>
+      <title>小坷笔记：一些SW小细节</title>
+      <link href="/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%BA%9BSW%E5%B0%8F%E7%BB%86%E8%8A%82/"/>
+      <url>/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%BA%9BSW%E5%B0%8F%E7%BB%86%E8%8A%82/</url>
+      
+        <content type="html"><![CDATA[<h1 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h1><p>solidworks建模是非常简单的，可以说有手就行，所以也没有什么做笔记的必要。坷的做法是对着B站教程边看边画，同时记录一些易犯错的的操作细节。</p><h1 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h1><p>草图未定义一般是没有和原点建立联系</p><p>转换实体引用其实是将图形投影到正在绘制的草图上，投影之后再拉伸凸台即可</p><p>标注圆弧或者圆的半径或者直径只需要点击圆弧即可，不需要点击圆心</p><p>做对称时，一般是<strong>点、构造线、点</strong>，这样后续才能完全定义。若采用线、构造线、线，则后续在点上做其他的线是没有完全定义的</p><p>凸台拉伸有时候找不到成形到下一面是因为方向不对，要先在方向里点击反向，然后就能找到了</p><p>找不到图形，用英文输入法按f键</p><p>ctrl+鼠标中键移动画布，鼠标中键移动视角</p><p>螺旋线的按钮不在草图中，而是在特征栏中</p><p>旋转凸台基体的命令会自动识别草图中的构造线作为旋转中心（若不设置构造线，也可以在手动选择旋转轴）</p><p>倒圆角的时候点击一个面，可以直接让整个面的四边倒角</p><p>使用圆周阵列需要先选择或者建立基准轴</p><p>如果要镜像一个实体，则要在“要镜像的实体”里选择，而不是“要镜像的特征里选择”</p><p>装配体中旋转单个零件是按鼠标右键</p><p>第一个零件必须通过确定键来添加进装配体，以保证零件与装配体的坐标系相同</p><p>复制零件是要先点击零件再按ctrl键才行，不能先按ctrl键</p><p>高级配合中的宽度配合就是让两对面距离相等</p><p>同轴心是让圆柱的侧面和凹槽的侧面同轴心，底面圆之间不能同轴心</p><p>红绿灯按钮是重建按钮，有时候需要点击来刷新</p><p>当两个零件贴在一起，很难加配合的时候，可以<strong>复制其中一个，然后隐藏本体，再加配合</strong></p><p>遇到参考丢失的报错，只需要删掉原来的几何关系，重新添加新的几何关系</p><p>3D草图可通过tab键来转换绘制的方向</p><p>边界曲线能做的放养曲面都能做</p><p>缝合曲面的时候，如果缝合出来是封闭曲面，那么可以勾选<strong>创建实体</strong></p><p>剪裁曲面：曲面切曲面</p><p>使用曲面切出：曲面切实体</p><h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>个人认为sw就跟搭积木是一个道理，多练练，没什么技术难度。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 机器人 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Solidworks </tag>
+            
+            <tag> 建模 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>小坷笔记：ROS2常用代码模版</title>
       <link href="/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9AROS2%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%A8%A1%E7%89%88/"/>
       <url>/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9AROS2%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%A8%A1%E7%89%88/</url>
@@ -89,11 +116,11 @@
     
     
     <entry>
-      <title>小坷笔记：一些ROS2小细节</title>
-      <link href="/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%BA%9BROS2%E5%B0%8F%E7%BB%86%E8%8A%82/"/>
-      <url>/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%BA%9BROS2%E5%B0%8F%E7%BB%86%E8%8A%82/</url>
+      <title>闭链结构机器人Gazebo仿真踩坑实录</title>
+      <link href="/2025/03/04/%E9%97%AD%E9%93%BE%E7%BB%93%E6%9E%84%E6%9C%BA%E5%99%A8%E4%BA%BAGazebo%E4%BB%BF%E7%9C%9F%E8%B8%A9%E5%9D%91%E5%AE%9E%E5%BD%95/"/>
+      <url>/2025/03/04/%E9%97%AD%E9%93%BE%E7%BB%93%E6%9E%84%E6%9C%BA%E5%99%A8%E4%BA%BAGazebo%E4%BB%BF%E7%9C%9F%E8%B8%A9%E5%9D%91%E5%AE%9E%E5%BD%95/</url>
       
-        <content type="html"><![CDATA[<p>同一个终端内，source一次就够了，后续只需要colcon build。当然，新建终端之后要重新source。</p><p>终端里点击“上”就可以得到上一次输入的指令，在第一次指令输入错误需要再输一次又不想一个字一个字敲时很方便。</p><p>Linux终端中的矩形光标很烦人，非常不直观。我的技巧：矩形的左端的边就是Windows里的光标的位置，这样就很好判断了。</p><p>终端里的复制粘贴是ctrl+shift+c&#x2F;v。</p><p>Ctrl+&#x2F;快速注释</p><p>Alt+上下键可以控制单行代码上下移动</p><p>cat和xacro作为命令，后面拼接路径时记得加空格</p><p>光标放在某一行，无需选中任何，快速Ctrl c+Ctrl v可以实现一整行的复制粘贴</p><p>名字里带有default的变量，表示默认的意思。一般来说，如果不指定，那么就按default来执行。如果指定了，那么按照制定了的来执行</p><p>rviz里，红色x轴，绿色y轴，蓝色z轴</p><p>xacro或urdf出现报错：Check that :Your XML is well-formed，说明XML格式错误，如果实在找不出错误，那么常见原因：标签未闭合。将单行标签末尾从&gt;改成&#x2F;&gt;。</p>]]></content>
+        <content type="html"><![CDATA[<p>这篇记录了小坷尝试将带有闭链结构的机器人导入Gazebo仿真踩坑的过程。这个过程还没有结束，持续更新中。</p><h1 id="进入正题"><a href="#进入正题" class="headerlink" title="进入正题"></a>进入正题</h1><p>通过查阅更多的资料与教程，了解到要将solidworks导入ros中仿真，通常是按照以下几步：</p><ol><li>通过urdf插件，将sw文件转换成urdf</li><li>将urdf在Rviz中可视化</li><li>将urdf导入Gazebo进行仿真</li></ol><p>使用插件从solidworks导出urdf文件并导入ros中，已经非常成熟且有很多教程了。然而ros2和ros有较大的差别，urdf的使用也有不少的差异。最重要的是<strong>urdf插件导出的urdf模型并不能直接在ros2中使用。</strong> 国内的教程非常少，且每个实践下来都有各自的问题，我将多个教程和帖子连起来看，互相补充，得到一套方法。</p><p>将整个机器人导入有点复杂，我决定先用一个最简单的舵机模型，把整个过程实现一遍，先打通流程，然后再把表情机器人模型导入，这样万无一失，如果在这个过程中踩坑了，由于是简单的舵机模型，处理起来要方便很多</p><p>（事后来看，这个决定<strong>极其错误</strong>，想法很美好，但忽略了一个问题：复杂模型和简单模型差别太大，很多坑只有复杂模型会遇到）</p><p>找了个视频教程，教程中使用的是Moviet2，过程极其顺利，舵机很快就在Moviet2中可视化出来，并可以通过拉条控制旋转<br><img src="https://img.picui.cn/free/2025/03/05/67c7ee897a1c2.png" alt="展示舵机"></p><p>信心大增，开始正式导入表情机器人模型</p><h1 id="踩坑一"><a href="#踩坑一" class="headerlink" title="踩坑一"></a>踩坑一</h1><p>按照下面方式建的功能包理论上是很常规的</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ros2 pkg create facerobot_description --build-type ament_python</span><br></pre></td></tr></table></figure><p>事实上，在一开始用舵机做实验的时候，确实也没问题，但是换成表情机器人后，后续会出现无法显示模型的问题<br>简直是莫名其妙</p><p>上网查找原因，发现很多人也遇到这种情况，且国内没有解决方法，解决方法就是不自己建功能包，而是选择git clone一个现有的包，把其中的urdf和meshes文件替换成自己的，站在前人的肩膀上</p><p>受启发的帖子：<a href="https://zhuanlan.zhihu.com/p/465398486">sw2urdf插件导出urdf模型并在ros2-rviz2显示</a></p><p>我选择clone了一个现有的仓库</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/olmerg/lesson_urdf.git</span><br></pre></td></tr></table></figure><p>并对其进行修改：</p><ol><li>修改setup.py文件</li><li>修改package.xml文件</li><li>修改meshes文件夹</li><li>修改urdf文件夹</li><li>修改launch文件夹</li></ol><p>主要是修改里面的文件夹名称和路径名称</p><p>一通修改之后，相当于是建好了自己的功能包（在这个过程中还踩了无数的小坑，一言难尽）</p><p>终于，在Rviz中可视化出来了</p><p>此时发现Link旁边没有相应的拉条，没有办法拖动拉条进行相应的让机器人进行面部动作</p><p>此时意识到导出的urdf文件有问题，回头去看，发现原来是舵机旋转需要的轴，我以为选择Automatically他会自动生成，结果并没有，还是需要手动添加（那我请问这个自动生成的选项是摆设吗？）</p><p>总之，回头将轴手动一一添加上，再回到ros2中，发现一个更为致命的问题</p><h1 id="踩坑二"><a href="#踩坑二" class="headerlink" title="踩坑二"></a>踩坑二</h1><p>(刷到一个帖子介绍了一个网站，可以预览urdf文件，预览发现有问题就可以及时退回修改，没问题就可以正式导到Rviz2和Gazebo中进行下一步操作，网站链接：<a href="https://gkjohnson.github.io/urdf-loaders/javascript/example/bundle/">URDF Viewer Example</a>)</p><p><strong>urdf不能实现闭链！！！</strong><br>表情机器人里很多结构都是闭链结构，但是urdf不能实现这种结构，urdf只能a→b→c→d，但不能a→b→c→d→a，我学urdf的时候也没人告诉我，以至于当我在ros2里拖动拉条的时候才发现不对<br><img src="https://img.picui.cn/free/2025/03/05/67c7f0d1c60e6.png" alt="展示舵机"><br>想到的解决方法：</p><ol><li>通过添加支持闭链的urdf插件，从而使得urdf具备实现闭链的能力</li><li>将urdf转成sdf。<strong>SDF格式</strong>是URDF格式的升级版，支持描述并联结构。</li></ol><p>尝试方法一，翻了好几个帖子，都是只介绍推出了支持闭链的urdf插件，却不提供安装包，pass</p><p>尝试方法二，SDF建模方法有三种：</p><ol><li>利用Gazebo模型编辑器建模，保存即可得到SDF文件</li><li>从零开始编写一个新的SDF文件，并导入个性化的网格模型；</li><li>用solidworks_urdf插件，获取网格模型和相关参数，填充到SDF框架中</li></ol><p>毫无疑问我们选择第三种，URDF和SDF在结构上十分相似（实际上后者就是前者的加强版），因此所导出的网格文件、位置、惯量等参数，都可以很方便地移植到SDF模型中。</p><p>已经将urdf转换成sdf，但无法在gazebo里面显示</p><p>（已找到解决办法，后续更新）</p>]]></content>
       
       
       <categories>
@@ -118,38 +145,11 @@
     
     
     <entry>
-      <title>小坷笔记：一些SW小细节</title>
-      <link href="/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%BA%9BSW%E5%B0%8F%E7%BB%86%E8%8A%82/"/>
-      <url>/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%BA%9BSW%E5%B0%8F%E7%BB%86%E8%8A%82/</url>
+      <title>小坷笔记：一些ROS2小细节</title>
+      <link href="/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%BA%9BROS2%E5%B0%8F%E7%BB%86%E8%8A%82/"/>
+      <url>/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%BA%9BROS2%E5%B0%8F%E7%BB%86%E8%8A%82/</url>
       
-        <content type="html"><![CDATA[<h1 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h1><p>solidworks建模是非常简单的，可以说有手就行，所以也没有什么做笔记的必要。坷的做法是对着B站教程边看边画，同时记录一些易犯错的的操作细节。</p><h1 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h1><p>草图未定义一般是没有和原点建立联系</p><p>转换实体引用其实是将图形投影到正在绘制的草图上，投影之后再拉伸凸台即可</p><p>标注圆弧或者圆的半径或者直径只需要点击圆弧即可，不需要点击圆心</p><p>做对称时，一般是<strong>点、构造线、点</strong>，这样后续才能完全定义。若采用线、构造线、线，则后续在点上做其他的线是没有完全定义的</p><p>凸台拉伸有时候找不到成形到下一面是因为方向不对，要先在方向里点击反向，然后就能找到了</p><p>找不到图形，用英文输入法按f键</p><p>ctrl+鼠标中键移动画布，鼠标中键移动视角</p><p>螺旋线的按钮不在草图中，而是在特征栏中</p><p>旋转凸台基体的命令会自动识别草图中的构造线作为旋转中心（若不设置构造线，也可以在手动选择旋转轴）</p><p>倒圆角的时候点击一个面，可以直接让整个面的四边倒角</p><p>使用圆周阵列需要先选择或者建立基准轴</p><p>如果要镜像一个实体，则要在“要镜像的实体”里选择，而不是“要镜像的特征里选择”</p><p>装配体中旋转单个零件是按鼠标右键</p><p>第一个零件必须通过确定键来添加进装配体，以保证零件与装配体的坐标系相同</p><p>复制零件是要先点击零件再按ctrl键才行，不能先按ctrl键</p><p>高级配合中的宽度配合就是让两对面距离相等</p><p>同轴心是让圆柱的侧面和凹槽的侧面同轴心，底面圆之间不能同轴心</p><p>红绿灯按钮是重建按钮，有时候需要点击来刷新</p><p>当两个零件贴在一起，很难加配合的时候，可以<strong>复制其中一个，然后隐藏本体，再加配合</strong></p><p>遇到参考丢失的报错，只需要删掉原来的几何关系，重新添加新的几何关系</p><p>3D草图可通过tab键来转换绘制的方向</p><p>边界曲线能做的放养曲面都能做</p><p>缝合曲面的时候，如果缝合出来是封闭曲面，那么可以勾选<strong>创建实体</strong></p><p>剪裁曲面：曲面切曲面</p><p>使用曲面切出：曲面切实体</p><h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>个人认为sw就跟搭积木是一个道理，多练练，没什么技术难度。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 机器人 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Solidworks </tag>
-            
-            <tag> 建模 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>闭链结构机器人Gazebo仿真踩坑实录</title>
-      <link href="/2025/03/04/%E9%97%AD%E9%93%BE%E7%BB%93%E6%9E%84%E6%9C%BA%E5%99%A8%E4%BA%BAGazebo%E4%BB%BF%E7%9C%9F%E8%B8%A9%E5%9D%91%E5%AE%9E%E5%BD%95/"/>
-      <url>/2025/03/04/%E9%97%AD%E9%93%BE%E7%BB%93%E6%9E%84%E6%9C%BA%E5%99%A8%E4%BA%BAGazebo%E4%BB%BF%E7%9C%9F%E8%B8%A9%E5%9D%91%E5%AE%9E%E5%BD%95/</url>
-      
-        <content type="html"><![CDATA[<p>这篇记录了小坷尝试将带有闭链结构的机器人导入Gazebo仿真踩坑的过程。这个过程还没有结束，持续更新中。</p><h1 id="进入正题"><a href="#进入正题" class="headerlink" title="进入正题"></a>进入正题</h1><p>通过查阅更多的资料与教程，了解到要将solidworks导入ros中仿真，通常是按照以下几步：</p><ol><li>通过urdf插件，将sw文件转换成urdf</li><li>将urdf在Rviz中可视化</li><li>将urdf导入Gazebo进行仿真</li></ol><p>使用插件从solidworks导出urdf文件并导入ros中，已经非常成熟且有很多教程了。然而ros2和ros有较大的差别，urdf的使用也有不少的差异。最重要的是<strong>urdf插件导出的urdf模型并不能直接在ros2中使用。</strong> 国内的教程非常少，且每个实践下来都有各自的问题，我将多个教程和帖子连起来看，互相补充，得到一套方法。</p><p>将整个机器人导入有点复杂，我决定先用一个最简单的舵机模型，把整个过程实现一遍，先打通流程，然后再把表情机器人模型导入，这样万无一失，如果在这个过程中踩坑了，由于是简单的舵机模型，处理起来要方便很多</p><p>（事后来看，这个决定<strong>极其错误</strong>，想法很美好，但忽略了一个问题：复杂模型和简单模型差别太大，很多坑只有复杂模型会遇到）</p><p>找了个视频教程，教程中使用的是Moviet2，过程极其顺利，舵机很快就在Moviet2中可视化出来，并可以通过拉条控制旋转<br><img src="https://img.picui.cn/free/2025/03/05/67c7ee897a1c2.png" alt="展示舵机"></p><p>信心大增，开始正式导入表情机器人模型</p><h1 id="踩坑一"><a href="#踩坑一" class="headerlink" title="踩坑一"></a>踩坑一</h1><p>按照下面方式建的功能包理论上是很常规的</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ros2 pkg create facerobot_description --build-type ament_python</span><br></pre></td></tr></table></figure><p>事实上，在一开始用舵机做实验的时候，确实也没问题，但是换成表情机器人后，后续会出现无法显示模型的问题<br>简直是莫名其妙</p><p>上网查找原因，发现很多人也遇到这种情况，且国内没有解决方法，解决方法就是不自己建功能包，而是选择git clone一个现有的包，把其中的urdf和meshes文件替换成自己的，站在前人的肩膀上</p><p>受启发的帖子：<a href="https://zhuanlan.zhihu.com/p/465398486">sw2urdf插件导出urdf模型并在ros2-rviz2显示</a></p><p>我选择clone了一个现有的仓库</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/olmerg/lesson_urdf.git</span><br></pre></td></tr></table></figure><p>并对其进行修改：</p><ol><li>修改setup.py文件</li><li>修改package.xml文件</li><li>修改meshes文件夹</li><li>修改urdf文件夹</li><li>修改launch文件夹</li></ol><p>主要是修改里面的文件夹名称和路径名称</p><p>一通修改之后，相当于是建好了自己的功能包（在这个过程中还踩了无数的小坑，一言难尽）</p><p>终于，在Rviz中可视化出来了</p><p>此时发现Link旁边没有相应的拉条，没有办法拖动拉条进行相应的让机器人进行面部动作</p><p>此时意识到导出的urdf文件有问题，回头去看，发现原来是舵机旋转需要的轴，我以为选择Automatically他会自动生成，结果并没有，还是需要手动添加（那我请问这个自动生成的选项是摆设吗？）</p><p>总之，回头将轴手动一一添加上，再回到ros2中，发现一个更为致命的问题</p><h1 id="踩坑二"><a href="#踩坑二" class="headerlink" title="踩坑二"></a>踩坑二</h1><p>(刷到一个帖子介绍了一个网站，可以预览urdf文件，预览发现有问题就可以及时退回修改，没问题就可以正式导到Rviz2和Gazebo中进行下一步操作，网站链接：<a href="https://gkjohnson.github.io/urdf-loaders/javascript/example/bundle/">URDF Viewer Example</a>)</p><p><strong>urdf不能实现闭链！！！</strong><br>表情机器人里很多结构都是闭链结构，但是urdf不能实现这种结构，urdf只能a→b→c→d，但不能a→b→c→d→a，我学urdf的时候也没人告诉我，以至于当我在ros2里拖动拉条的时候才发现不对<br><img src="https://img.picui.cn/free/2025/03/05/67c7f0d1c60e6.png" alt="展示舵机"><br>想到的解决方法：</p><ol><li>通过添加支持闭链的urdf插件，从而使得urdf具备实现闭链的能力</li><li>将urdf转成sdf。<strong>SDF格式</strong>是URDF格式的升级版，支持描述并联结构。</li></ol><p>尝试方法一，翻了好几个帖子，都是只介绍推出了支持闭链的urdf插件，却不提供安装包，pass</p><p>尝试方法二，SDF建模方法有三种：</p><ol><li>利用Gazebo模型编辑器建模，保存即可得到SDF文件</li><li>从零开始编写一个新的SDF文件，并导入个性化的网格模型；</li><li>用solidworks_urdf插件，获取网格模型和相关参数，填充到SDF框架中</li></ol><p>毫无疑问我们选择第三种，URDF和SDF在结构上十分相似（实际上后者就是前者的加强版），因此所导出的网格文件、位置、惯量等参数，都可以很方便地移植到SDF模型中。</p><p>已经将urdf转换成sdf，但无法在gazebo里面显示</p><p>（已找到解决办法，后续更新）</p>]]></content>
+        <content type="html"><![CDATA[<p>同一个终端内，source一次就够了，后续只需要colcon build。当然，新建终端之后要重新source。</p><p>终端里点击“上”就可以得到上一次输入的指令，在第一次指令输入错误需要再输一次又不想一个字一个字敲时很方便。</p><p>Linux终端中的矩形光标很烦人，非常不直观。我的技巧：矩形的左端的边就是Windows里的光标的位置，这样就很好判断了。</p><p>终端里的复制粘贴是ctrl+shift+c&#x2F;v。</p><p>Ctrl+&#x2F;快速注释</p><p>Alt+上下键可以控制单行代码上下移动</p><p>cat和xacro作为命令，后面拼接路径时记得加空格</p><p>光标放在某一行，无需选中任何，快速Ctrl c+Ctrl v可以实现一整行的复制粘贴</p><p>名字里带有default的变量，表示默认的意思。一般来说，如果不指定，那么就按default来执行。如果指定了，那么按照制定了的来执行</p><p>rviz里，红色x轴，绿色y轴，蓝色z轴</p><p>xacro或urdf出现报错：Check that :Your XML is well-formed，说明XML格式错误，如果实在找不出错误，那么常见原因：标签未闭合。将单行标签末尾从&gt;改成&#x2F;&gt;。</p>]]></content>
       
       
       <categories>
