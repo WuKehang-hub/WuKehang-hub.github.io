@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Ubuntu 环境下安装 Claude Code 并接入 DeepSeek V4 Pro 教程</title>
+      <link href="/2026/05/19/ubuntu%E5%AE%89%E8%A3%85claude%20code%E5%B9%B6%E6%8E%A5%E5%85%A5deepseek/"/>
+      <url>/2026/05/19/ubuntu%E5%AE%89%E8%A3%85claude%20code%E5%B9%B6%E6%8E%A5%E5%85%A5deepseek/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Ubuntu-环境下安装-Claude-Code-并通过-CC-Switch-接入-DeepSeek-V4-Pro-教程"><a href="#Ubuntu-环境下安装-Claude-Code-并通过-CC-Switch-接入-DeepSeek-V4-Pro-教程" class="headerlink" title="Ubuntu 环境下安装 Claude Code 并通过 CC-Switch 接入 DeepSeek V4 Pro 教程"></a>Ubuntu 环境下安装 Claude Code 并通过 CC-Switch 接入 DeepSeek V4 Pro 教程</h1><h3 id="第一步：准备环境（安装-Node-js）"><a href="#第一步：准备环境（安装-Node-js）" class="headerlink" title="第一步：准备环境（安装 Node.js）"></a>第一步：准备环境（安装 Node.js）</h3><p>Claude Code 依赖 Node.js 环境，要求版本 <strong>v18+</strong>。推荐使用 <code>nvm</code>（Node Version Manager）来管理 Node.js 版本，避免全局权限冲突。</p><p><strong>1. 下载并安装 nvm：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash</span><br></pre></td></tr></table></figure><p><strong>2. 使环境变量生效：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure><blockquote><p>如果你使用的是 zsh，请改为 <code>source ~/.zshrc</code>。</p></blockquote><p><strong>3. 安装并切换到 Node.js 20.20.1 版本：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvm install 20.20.1</span><br><span class="line">nvm use 20.20.1</span><br></pre></td></tr></table></figure><p><strong>4. 验证安装是否成功（应正常返回版本号）：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure><hr><h3 id="第二步：安装-Claude-Code"><a href="#第二步：安装-Claude-Code" class="headerlink" title="第二步：安装 Claude Code"></a>第二步：安装 Claude Code</h3><p>环境准备就绪后，通过 npm 全局安装 Claude Code 终端工具。</p><p><strong>1. 执行全局安装命令：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @anthropic-ai/claude-code</span><br></pre></td></tr></table></figure><p><strong>2. 验证安装（确保输出正常的版本号）：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude --version</span><br></pre></td></tr></table></figure><hr><h3 id="第三步：安装与配置-CC-Switch"><a href="#第三步：安装与配置-CC-Switch" class="headerlink" title="第三步：安装与配置 CC-Switch"></a>第三步：安装与配置 CC-Switch</h3><p>无需手动修改繁琐的系统环境变量，通过 CC-Switch 客户端可以实现图形化一键配置与切换。</p><p><strong>1. 安装 CC-Switch：</strong></p><p>去github上直接搜索CC-Switch，搜出来第一个就是，下载它的安装包。</p><p>在终端中进入你下载好的安装包目录，执行以下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> dpkg -i CC-Switch-v3.15.0-Linux-x86_64.deb</span><br></pre></td></tr></table></figure><blockquote><p>如果提示缺少依赖，可以运行 <code>sudo apt --fix-broken install</code> 修复。</p></blockquote><p><strong>2. 打开 CC-Switch：</strong></p><p>安装完成后，在 Ubuntu 应用程序菜单中找到并打开 <strong>CC-Switch</strong>。</p><p><strong>3. 添加 API 配置：</strong></p><p>在软件界面中，<strong>直接点击”加号（＋）”按钮</strong>来添加 API 配置，填入以下核心信息：</p><table><thead><tr><th>配置项</th><th>建议值</th></tr></thead><tbody><tr><td>Base URL</td><td><code>https://api.deepseek.com/anthropic</code></td></tr><tr><td>API Key</td><td>你的 DeepSeek API Key（必填，请替换为真实值，没有则需要在deepseek官网注册一个）</td></tr><tr><td>Model</td><td><code>deepseek-v4-pro[1m]</code></td></tr></tbody></table><p>保存后即可一键开启代理转发。</p><hr><h3 id="第四步：启动与日常使用"><a href="#第四步：启动与日常使用" class="headerlink" title="第四步：启动与日常使用"></a>第四步：启动与日常使用</h3><p>配置完成后，建议在具体的代码项目目录中启动 Claude Code，以便 AI 能够完美理解你的代码上下文。</p><p><strong>1. 进入你的代码项目文件夹：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /path/to/your/project</span><br></pre></td></tr></table></figure><p><strong>2. 启动 Claude Code：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">claude</span><br></pre></td></tr></table></figure><p><strong>3. 开始使用：</strong></p><p>现在你可以在 <code>&gt;</code> 提示符后直接使用自然语言向 DeepSeek 提问，或下达代码编写、重构、调试等指令。</p><p><strong>常用操作速查：</strong></p><table><thead><tr><th>操作</th><th>命令&#x2F;方式</th></tr></thead><tbody><tr><td>退出会话</td><td><code>/exit</code></td></tr><tr><td>查看帮助</td><td><code>/help</code></td></tr><tr><td>清除对话历史</td><td><code>/clear</code></td></tr><tr><td>查看当前状态</td><td><code>/status</code></td></tr></tbody></table><hr><h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p><strong>Q: 提示 <code>claude: command not found</code>？</strong></p><p>A: 检查 npm 全局安装路径是否在 <code>PATH</code> 中：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm list -g --depth=0</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></span><br></pre></td></tr></table></figure><p>如果路径缺失，将以下内容添加到 <code>~/.bashrc</code>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;<span class="variable">$HOME</span>/.npm-global/bin:<span class="variable">$PATH</span>&quot;</span></span><br></pre></td></tr></table></figure><p><strong>Q: CC-Switch 代理转发不生效？</strong></p><p>A: 检查 CC-Switch 是否正在运行（系统托盘应有图标），确认 Base URL 和 API Key 填写无误，并确保网络能正常访问 DeepSeek API。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Claude Code </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>RL运控论文学习笔记</title>
       <link href="/2026/05/19/%E8%BF%90%E6%8E%A7%E8%AE%BA%E6%96%87%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
       <url>/2026/05/19/%E8%BF%90%E6%8E%A7%E8%AE%BA%E6%96%87%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
@@ -316,33 +341,6 @@
     
     
     <entry>
-      <title>小坷笔记：一些SW小细节</title>
-      <link href="/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%BA%9BSW%E5%B0%8F%E7%BB%86%E8%8A%82/"/>
-      <url>/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%BA%9BSW%E5%B0%8F%E7%BB%86%E8%8A%82/</url>
-      
-        <content type="html"><![CDATA[<h1 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h1><p>solidworks建模是非常简单的，可以说有手就行，所以也没有什么做笔记的必要。小坷的做法是对着B站教程边看边画，同时记录一些易犯错的的操作细节。</p><h1 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h1><p>草图未定义一般是没有和原点建立联系</p><p>转换实体引用其实是将图形投影到正在绘制的草图上，投影之后再拉伸凸台即可</p><p>标注圆弧或者圆的半径或者直径只需要点击圆弧即可，不需要点击圆心</p><p>做对称时，一般是<strong>点、构造线、点</strong>，这样后续才能完全定义。若采用线、构造线、线，则后续在点上做其他的线是没有完全定义的</p><p>凸台拉伸有时候找不到成形到下一面是因为方向不对，要先在方向里点击反向，然后就能找到了</p><p>找不到图形，用英文输入法按f键</p><p>ctrl+鼠标中键移动画布，鼠标中键移动视角</p><p>螺旋线的按钮不在草图中，而是在特征栏中</p><p>旋转凸台基体的命令会自动识别草图中的构造线作为旋转中心（若不设置构造线，也可以在手动选择旋转轴）</p><p>倒圆角的时候点击一个面，可以直接让整个面的四边倒角</p><p>使用圆周阵列需要先选择或者建立基准轴</p><p>如果要镜像一个实体，则要在“要镜像的实体”里选择，而不是“要镜像的特征里选择”</p><p>装配体中旋转单个零件是按鼠标右键</p><p>第一个零件必须通过确定键来添加进装配体，以保证零件与装配体的坐标系相同</p><p>复制零件是要先点击零件再按ctrl键才行，不能先按ctrl键</p><p>高级配合中的宽度配合就是让两对面距离相等</p><p>同轴心是让圆柱的侧面和凹槽的侧面同轴心，底面圆之间不能同轴心</p><p>红绿灯按钮是重建按钮，有时候需要点击来刷新</p><p>当两个零件贴在一起，很难加配合的时候，可以<strong>复制其中一个，然后隐藏本体，再加配合</strong></p><p>遇到参考丢失的报错，只需要删掉原来的几何关系，重新添加新的几何关系</p><p>3D草图可通过tab键来转换绘制的方向</p><p>边界曲线能做的放养曲面都能做</p><p>缝合曲面的时候，如果缝合出来是封闭曲面，那么可以勾选<strong>创建实体</strong></p><p>剪裁曲面：曲面切曲面</p><p>使用曲面切出：曲面切实体</p><p>拖球体怎么绘制：先画好椭圆，然后画好引导线和放样终点的曲线，然后转换实体引用将完整的椭圆分成两个半个椭圆，再让这两个半个椭圆分别放养曲面</p><p>当出现部分实体以线条形式显示时的，如何解决：设置-&gt;显示-&gt;取消勾选“为薄壁特征优化”-&gt;点击确定。有时本来没有勾选也会出现这种bug，那就先勾选再取消勾选，再点击确定。这是sw里一个很常见的bug</p><p>多用转换实体引用，可以省很多事</p><h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>个人认为sw就跟搭积木是一个道理，多练练，没什么技术难度</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 机器人 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Solidworks </tag>
-            
-            <tag> 建模 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>小坷笔记：Python入门</title>
       <link href="/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9APython%E5%85%A5%E9%97%A8/"/>
       <url>/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9APython%E5%85%A5%E9%97%A8/</url>
@@ -362,6 +360,33 @@
             <tag> Python </tag>
             
             <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>小坷笔记：一些SW小细节</title>
+      <link href="/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%BA%9BSW%E5%B0%8F%E7%BB%86%E8%8A%82/"/>
+      <url>/2025/03/04/%E5%B0%8F%E5%9D%B7%E7%AC%94%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%BA%9BSW%E5%B0%8F%E7%BB%86%E8%8A%82/</url>
+      
+        <content type="html"><![CDATA[<h1 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h1><p>solidworks建模是非常简单的，可以说有手就行，所以也没有什么做笔记的必要。小坷的做法是对着B站教程边看边画，同时记录一些易犯错的的操作细节。</p><h1 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h1><p>草图未定义一般是没有和原点建立联系</p><p>转换实体引用其实是将图形投影到正在绘制的草图上，投影之后再拉伸凸台即可</p><p>标注圆弧或者圆的半径或者直径只需要点击圆弧即可，不需要点击圆心</p><p>做对称时，一般是<strong>点、构造线、点</strong>，这样后续才能完全定义。若采用线、构造线、线，则后续在点上做其他的线是没有完全定义的</p><p>凸台拉伸有时候找不到成形到下一面是因为方向不对，要先在方向里点击反向，然后就能找到了</p><p>找不到图形，用英文输入法按f键</p><p>ctrl+鼠标中键移动画布，鼠标中键移动视角</p><p>螺旋线的按钮不在草图中，而是在特征栏中</p><p>旋转凸台基体的命令会自动识别草图中的构造线作为旋转中心（若不设置构造线，也可以在手动选择旋转轴）</p><p>倒圆角的时候点击一个面，可以直接让整个面的四边倒角</p><p>使用圆周阵列需要先选择或者建立基准轴</p><p>如果要镜像一个实体，则要在“要镜像的实体”里选择，而不是“要镜像的特征里选择”</p><p>装配体中旋转单个零件是按鼠标右键</p><p>第一个零件必须通过确定键来添加进装配体，以保证零件与装配体的坐标系相同</p><p>复制零件是要先点击零件再按ctrl键才行，不能先按ctrl键</p><p>高级配合中的宽度配合就是让两对面距离相等</p><p>同轴心是让圆柱的侧面和凹槽的侧面同轴心，底面圆之间不能同轴心</p><p>红绿灯按钮是重建按钮，有时候需要点击来刷新</p><p>当两个零件贴在一起，很难加配合的时候，可以<strong>复制其中一个，然后隐藏本体，再加配合</strong></p><p>遇到参考丢失的报错，只需要删掉原来的几何关系，重新添加新的几何关系</p><p>3D草图可通过tab键来转换绘制的方向</p><p>边界曲线能做的放养曲面都能做</p><p>缝合曲面的时候，如果缝合出来是封闭曲面，那么可以勾选<strong>创建实体</strong></p><p>剪裁曲面：曲面切曲面</p><p>使用曲面切出：曲面切实体</p><p>拖球体怎么绘制：先画好椭圆，然后画好引导线和放样终点的曲线，然后转换实体引用将完整的椭圆分成两个半个椭圆，再让这两个半个椭圆分别放养曲面</p><p>当出现部分实体以线条形式显示时的，如何解决：设置-&gt;显示-&gt;取消勾选“为薄壁特征优化”-&gt;点击确定。有时本来没有勾选也会出现这种bug，那就先勾选再取消勾选，再点击确定。这是sw里一个很常见的bug</p><p>多用转换实体引用，可以省很多事</p><h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>个人认为sw就跟搭积木是一个道理，多练练，没什么技术难度</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 机器人 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Solidworks </tag>
+            
+            <tag> 建模 </tag>
             
         </tags>
       
